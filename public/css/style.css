@@ -1,0 +1,51 @@
+body{
+    font-family: 'Palatino, URW Palladio L, serif';
+}
+.home_name{
+    font-size: 70px;    
+}
+
+.home_bar{
+    height:90px;
+    width:2px;
+    background-color:black;
+    margin-top: -27px;
+    margin-left: 5px;
+ }
+ 
+.flex{
+    display: flex;
+}
+
+.git_username{
+    font-size: 50px;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+.container_name_username{
+    padding-top: 20%;
+    position: absolute;
+    top: 5%;
+    left: 33%;
+}
+
+.space_between{
+    padding-left: 100%;
+}
+
+.space_navbar{
+    margin-left: 20%;
+}
+
+.setImage{
+    height: 1080px;
+    margin-top: -5%;
+    background-image:  url("../images/computer.jpg");
+    opacity: 0.4;
+    background-size: cover;
+}
+
+.font_white{
+    color: white;
+}
