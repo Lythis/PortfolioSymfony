@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axentix@1.0.0-beta.2/dist/css/axentix.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         {% block stylesheets %}{% endblock %}
+        <script type="text/javascript" src="{{ asset('script/script.js')}}"></script>
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
     <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light  ">
+        <nav class="navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand font_white"  href="{{ path('main') }}">Lythis</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,6 +39,7 @@
                     </li>
                 </ul>
             </div>
+            <button type="button" class="btn btn-light">Connexion</button>
         </nav>
     </header>
     <main>

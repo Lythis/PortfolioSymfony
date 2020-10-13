@@ -1,8 +1,10 @@
 body{
     font-family: 'Palatino, URW Palladio L, serif';
+    scroll-behavior: smooth;
 }
 .home_name{
-    font-size: 70px;    
+    font-size: 70px;
+    
 }
 
 .home_bar{
@@ -27,7 +29,7 @@ body{
     padding-top: 20%;
     position: absolute;
     top: 5%;
-    left: 33%;
+    left: 32%;
 }
 
 .space_between{
@@ -35,17 +37,51 @@ body{
 }
 
 .space_navbar{
-    margin-left: 20%;
+    margin-left: 8%;
 }
 
 .setImage{
-    height: 1080px;
+    height: 900px;
     margin-top: -5%;
     background-image:  url("../images/computer.jpg");
-    opacity: 0.4;
+    opacity: 0.5;
     background-size: cover;
 }
 
 .font_white{
     color: white;
+}
+
+.nav-item{
+    font-size: 20px;
+}
+
+.dev_fullstack{
+    font-size:40px;
+    top:52%;
+    left: 35%;
+    position: absolute;
+}
+
+.second{
+    margin-top: 3%;
+}
+
+.center{
+    text-align: center;
+}
+
+.presentation_txt{
+    margin-left: 27%;
+    margin-right: 23%;
+}
+
+.scriptNav{
+    background-color: black;
+}
+
+.navbar{
+    position: fixed;
+    margin-top: 5%;
+    width: 100%;
 }
