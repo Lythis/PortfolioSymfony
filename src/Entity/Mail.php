@@ -37,6 +37,7 @@ class Mail
      */
     private $Prenom_Mail;
 
+
     public function getId(): ?int
     {
         return $this->id;
