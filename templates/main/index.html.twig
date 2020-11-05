@@ -81,59 +81,46 @@
             </div>
         </div>
         <h2 class="center mesProjets"> Mes projets </h2>
-        <div class="containerProjet"> 
-            <div class="card">
-                <div class="imgBx">
-                    <img src="../images/computer.jpg">
+        {% for projet in projet %}
+        
+        <div class="containerProjet">
+            <a role="button" data-toggle="modal" data-target="#exampleModal">
+                <div class="card">
+                    <div class="imgBx">
+                        <img src="{{ projet.image1projet }}" alt="Image de projet numéro 1">
+                    </div>
+                    <div class="content">
+                        <h2>Card One </h2>
+                        <p>{{ projet.descprojet }}</p>
+                    </div>
                 </div>
-                <div class="content">
-                    <h2>Card One </h2>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar eros quis varius molestie.
-                    Vivamus maximus sollicitudin libero, vitae viverra nibh ultrices vitae. Nulla quis eleifend quam. 
-                    Donec vitae semper mauris. Vivamus maximus augue euismod diam vehicula iaculis. Maecenas non lacus diam. 
-                    Proin dictum consequat varius. Nam dolor purus, pulvinar et pretium non, facilisis vestibulum mi. Suspendisse 
-                    condimentum sollicitudin leo, blandit commodo purus viverra sit amet. Donec metus orci, lobortis dapibus lorem non, 
-                    euismod tristique ligula. Nunc ut vulputate nisl, nec luctus risus.
-                </div>
-            </div>
-            <div class="card">
-                <div class="imgBx">
-                    <img src="../images/computer.jpg">
-                </div>
-                <div class="content">
-                    <h2>Card Two </h2>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar eros quis varius molestie.
-                    Vivamus maximus sollicitudin libero, vitae viverra nibh ultrices vitae. Nulla quis eleifend quam. 
-                    Donec vitae semper mauris. Vivamus maximus augue euismod diam vehicula iaculis. Maecenas non lacus diam. 
-                    Proin dictum consequat varius. Nam dolor purus, pulvinar et pretium non, facilisis vestibulum mi. Suspendisse 
-                    condimentum sollicitudin leo, blandit commodo purus viverra sit amet. Donec metus orci, lobortis dapibus lorem non, 
-                    euismod tristique ligula. Nunc ut vulputate nisl, nec luctus risus.
-                </div>
-            </div>
-             <div class="card">
-                <div class="imgBx">
-                    <img src="../images/computer.jpg">
-                </div>
-                <div class="content">
-                    <h2>Card Two </h2>
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar eros quis varius molestie.
-                    Vivamus maximus sollicitudin libero, vitae viverra nibh ultrices vitae. Nulla quis eleifend quam. 
-                    Donec vitae semper mauris. Vivamus maximus augue euismod diam vehicula iaculis. Maecenas non lacus diam. 
-                    Proin dictum consequat varius. Nam dolor purus, pulvinar et pretium non, facilisis vestibulum mi. Suspendisse 
-                    condimentum sollicitudin leo, blandit commodo purus viverra sit amet. Donec metus orci, lobortis dapibus lorem non, 
-                    euismod tristique ligula. Nunc ut vulputate nisl, nec luctus risus.
+            </a>
+           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-x1" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body">
+                ...
                 </div>
             </div>
         </div>
+    </div>
+            
+        {% endfor %}
             <div class="Contact">
                 <h2 class="center"> Me Contacter </h2>
                 <section> 
+                <div class="Formulaire_container"> 
                     {{ form_start(form) }}
                         {{ form_start(form.Nom_Mail) }}
                         {{ form_start(form.Objet_Mail) }}
                         {{ form_start(form.Message_Mail) }}
                         {{ form_start(form.Prenom_Mail) }}
-                        
                         <button type="submit"> Valider <button>
                     {{ form_end(form) }}
                 </section>
