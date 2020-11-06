@@ -38,7 +38,7 @@ class Projet
     private $desc_projet;
 
     /**
-     * @ORM\Column(type="datetime")
+      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $date_projet;
 
@@ -46,12 +46,42 @@ class Projet
      * @ORM\Column(type="string", length=255)
      */
     private $tech_projet;
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $titre_projet;
+     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $git_projet;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    public function getGitProjet():?string
+    {
+        return $this->git_projet;
+    }
+
+    public function setGitProjet(string $git_projet): self
+    {
+        $this ->git_projet = $git_projet;
+        
+        return $this;
+    }
+    public function getTitreProjet(): ?string
+    {
+        return $this->titre_projet;
+    }
+
+    public function setTitreProjet(?string $titre_projet): self
+    {
+        $this->titre_projet = $titre_projet;
+        
+        return $this;
+    }
     public function getImage1Projet(): ?string
     {
         return $this->image1_projet;
@@ -100,12 +130,12 @@ class Projet
         return $this;
     }
 
-    public function getDateProjet(): ?\DateTimeInterface
+    public function getDateProjet(): ?string
     {
         return $this->date_projet;
     }
 
-    public function setDateProjet(\DateTimeInterface $date_projet): self
+    public function setDateProjet(string $date_projet): self
     {
         $this->date_projet = $date_projet;
 

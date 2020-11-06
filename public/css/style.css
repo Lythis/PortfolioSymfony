@@ -4,8 +4,19 @@ body{
 }
 .home_name{
     font-size: 70px;
-    
+    margin-top: -74px;
+
 }
+
+.home_name .nom{
+    margin-top: -25%;
+    margin-right: 5%;
+}
+.techno h3{
+    margin-top: 2%;
+    margin-right: 5%;
+}
+
 
 .home_bar{
     height:90px;
@@ -15,29 +26,38 @@ body{
     margin-left: 5px;
  }
  
+ .container_name_username{
+     margin-left: 35%;
+     margin-right: 55%;
+     padding-top: 20%;
+     position: absolute;
+     top: 4%;
+ }
  .title_bar{
     height: 1px;
-    width: 500px;
+
     background-color: black;
     margin-left: 37%;
+    margin-right: 37%;
  }
 
 .flex{
     display: flex;
 }
 
+.progression{
+    margin-top: 10%;
+}
+
+.Contact{
+    margin-top: 10%;
+}
 .git_username{
     font-size: 50px;
     margin-top: -20px;
     margin-left: 30px;
 }
 
-.container_name_username{
-    padding-top: 20%;
-    position: absolute;
-    top: 5%;
-    left: 32%;
-}
 
 .space_between{
     padding-left: 300px;
@@ -91,7 +111,8 @@ body{
 }
 
 .btn_cv{
-    margin-left: 36%;
+    margin-left: 33%;
+    margin-right: 33%;
     margin-top: 10%;
     border-radius: 5px;
     border: 2px solid black;
@@ -102,11 +123,36 @@ body{
     background-color: black;
 }
 
+.desc_projet
+{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.imageProjet{
+    margin-top: 5%;
+    border: 1px solid black;
+    margin-left: 1%;
+}
 .navbar{
     position: fixed;
-    margin-top: 5%;
     width: 100%;
+    z-index: 1;
+    margin-top: 5%;
 }
+
+.techno{
+    display: flex;
+    margin-bottom: 10%;
+}
+.containerImage{
+    display: flex;
+}
+.modalAffichage{
+    max-width: 1500px;
+    margin-left: 13%;
+}
+
 
 .nav-touche{
     color: black;
@@ -277,6 +323,17 @@ body{
 
 
 @media only screen and (max-width: 990px){
+  
+    .container_name_username{
+        margin-left: 5%;
+    }
+    .dev_fullstack{
+        top: 30%;
+        left: 5%;
+    }
+    .form_container{
+        left: 15%;
+    }
     .main-timeline .date-content:before{
         width: 22.5%;
     }
@@ -292,6 +349,9 @@ body{
     .main-timeline:before{
         margin: 0;
         left: 7px;
+    }
+    .form_container{
+        left: 15%;
     }
     .main-timeline .timeline{
         margin-bottom: 20px;
@@ -338,16 +398,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
-    height: 600px;
 }
 
 .containerProjet .card{
-    max-width: 300px;
+    max-width: 325px;
     position: relative;
-    height: 215px;
-    background: #fff;
-    margin: 30px 10px;
-    padding: 20px 15px;
+    height: 250px;
+    background: #14394E;
     display: flex;
     flex-direction: column;
     box-shadow: 0 5PX 20px rgba(0,0,0,0.5);
@@ -356,22 +413,24 @@ body{
 
 .containerProjet .card:hover
 {
-    height: 420px;
+    height: 500px;
+    background-color: white;
 }
 .containerProjet .card .imgBx
 {
     position: relative;
-    width: 230px;
+    width: 300px;
     height: 260px;
-    top: -40px;
-    left: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    margin-left: 12px;
+    margin-top: 10px;
 }
 
 .containerProjet .card .imgBx img
 {
     max-width: 100%;
     border-radius: 4px;
+    height: 225px;
 }
 
 .containerProjet .card .content
@@ -390,7 +449,7 @@ body{
 {
     visibility: visible;
     opacity: 1;
-    margin-top: -40px;
+    margin-top: 0px;
     transition-delay: 0.3s;
 }
 
@@ -413,4 +472,32 @@ body{
     margin-left: 10px;
     margin-top:-5px;
 }
-  
+
+.form_container{
+    margin-left: 40%;
+    background-color: white;
+    border: none;
+}
+
+.btn_form{
+    margin-left: 14%;
+    margin-bottom: 30%;
+}
+
+.form-group
+{
+    justify-content: space-between;
+    display: flex;
+}
+
+.form-group input{
+    width: 400px;
+}
+.form-group label{
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.form-group textarea{
+    width: 400px;
+}

@@ -8,7 +8,8 @@
     </div>
     <div class="flex container_name_username">
         <div class="home_name">
-            <p> Morgan Watbled <p>
+            <p> Morgan  </p>
+            <p class="nom"> Watbled </p>
         </div>
         
         <div class="home_bar"></div>
@@ -26,12 +27,13 @@
         <h2 class="dev_fullstack"> Developpeur Web Junior</h2>
         
     </div>
-    <div class="Presentation">  
+    <div class="Presentation" id="presentation">  
         <h2 class="center second"> Qui suis je ? </h2>
         <div class="title_bar"></div>
-        <p class="presentation_txt"> Je suis actuellement un étudiant en deuxième année de BTS SIO au lycée Saint Vincent à Senlis, j'étudie les 
-        languages de programmation tel que php/c#/python ainsi que des frameworks comme JQuery/Bootstrap/Symfony afin de pouvoir devneir développeur 
-        FullStack. Pendant mes années d'études j'ai réalisé plusieurs projets qui sont visibles sur mon site. 
+        <p class="presentation_txt"> Je suis actuellement un étudiant en deuxième année de BTS SIO au lycée Saint-Vincent à Senlis, 
+        j'étudie les languages de programmation tel que Php/c#/python ainsi que des frameworks comme JQuery/Bootstrap/Symfony afin de 
+        pouvoir devenir développeur Full Stack. Pendant mes années d'études j'ai réalisé plusieurs projets qui sont visibles sur mon site.
+
         <button class="btn_cv"> Accès à mon cv sous format Pdf </button>
     </div> 
     <div class="progression">
@@ -54,8 +56,9 @@
                             <div class="timeline-content">
                                 <h3 class="title">BTS 2 SIO</h3>
                                 <p class="description">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. 
-                                    Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
+                                   Deuxième année de mon BTS SIO au Lycée Saint Vincent situé à Senlis.
+                                   Apprentissage du php Objet et du frameworks Symfony avec lequel j'ai fait ce portfolio.
+
                                 </p>
                             </div>
                         <div class="timeline">
@@ -71,8 +74,8 @@
                             <div class="timeline-content">
                                 <h3 class="title">BTS 1 SIO</h3>
                                     <p class="description">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie.
-                                    </p>
+                                        Première année de mon BTS SIO au Lycée Saint Vincent situé à Senlis.
+                                        Apprentissage des bases du développement web et de la programmation.                                   </p>
                             </div>
                         </div>
                         </div>
@@ -80,51 +83,84 @@
                 </div>
             </div>
         </div>
-        <h2 class="center mesProjets"> Mes projets </h2>
-        {% for projet in projet %}
+        </div>
+        <h2 class="center mesProjets" id="projets"> Mes projets </h2>
+        {% for project in projet %}
         
         <div class="containerProjet">
-            <a role="button" data-toggle="modal" data-target="#exampleModal">
+            <a role="button" data-toggle="modal" data-target="#modal-{{ project.id }}">
                 <div class="card">
                     <div class="imgBx">
-                        <img src="{{ projet.image1projet }}" alt="Image de projet numéro 1">
+                        <img src="{{ project.image1projet }}" alt="Image de projet numéro 1">
                     </div>
                     <div class="content">
-                        <h2>Card One </h2>
-                        <p>{{ projet.descprojet }}</p>
+                        <h2> {{ project.titreprojet }} </h2>
+                        <p>{{ project.descprojet }}</p>
                     </div>
                 </div>
             </a>
-           <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-x1" role="document">
+           <div class="modal fade" id="modal-{{ project.id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modalAffichage modal-x1" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">{{ project.titreprojet }}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                 <div class="modal-body">
-                ...
+                <div class="desc_projet">
+                    <h2 class="center"> Description </h2>
+                    {{ project.descprojet }}
+                    Voici les pages :           
+                </div>    
+                <div class="containerImage">
+                    <img class="imageProjet" width="48%" height="600px" src="{{ project.image1projet }}" alt="Image de projet numéro 1" >
+                    <img class="imageProjet" width="48%" height="600px" src="{{ project.image2projet }}" alt="Image de projet numéro 2" >
                 </div>
+                <div class="techno">
+                    <div class"container_projet_modal">
+                    <img class="imageProjet"width="48%" height="600px" src="{{ project.image3projet }}" alt="Image de projet numéro 2" >            
+                <h3> Les technologies utilisées sont les suivantes:
+                    <br> 
+                    {{ project.techprojet }}
+                </h3>
+                <div class="date">
+                    <h4> Réalisé du  {{ project.dateprojet }}
+                </div>
+                <a href="{{ project.gitprojet }}"> {{ project.gitprojet }} </a>
+                </div>
+                </div>
+            </div>
             </div>
         </div>
     </div>
-            
+    </div>
         {% endfor %}
-            <div class="Contact">
+        </div>
+        </div>
+            <div class="Contact" id="contact">
                 <h2 class="center"> Me Contacter </h2>
                 <section> 
-                <div class="Formulaire_container"> 
+                <div class="form_container"> 
                     {{ form_start(form) }}
-                        {{ form_start(form.Nom_Mail) }}
-                        {{ form_start(form.Objet_Mail) }}
-                        {{ form_start(form.Message_Mail) }}
-                        {{ form_start(form.Prenom_Mail) }}
-                        <button type="submit"> Valider <button>
+                    <div class="form-group"> 
+                        {{ form_row(form.Nom_Mail) }}
+                    </div>
+                    <div class="form-group"> 
+                        {{ form_row(form.Prenom_Mail) }}
+                    </div>
+                    <div class="form-group"> 
+                        {{ form_row(form.Objet_Mail) }}
+                    </div>
+                    <div class="form-group"> 
+                        {{ form_row(form.Message_Mail) }} 
+                    </div>                   
+                        <button class="btn_form btn btn-primary" type="submit"> Valider </button>
                     {{ form_end(form) }}
+                </div>
                 </section>
 
-</div>
+            </div>
 
 {% endblock %}
